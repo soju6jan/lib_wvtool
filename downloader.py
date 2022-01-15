@@ -211,7 +211,7 @@ class WVDownloader:
                         WVTool.mp4info(item['filepath_merge'], item['filepath_info'])
                     
                     if ct == 'audio':
-                        if item['lang'] != None:
+                        if item['lang'] != None and item['lang'] != '' and item['lang'].encode('utf8') != b'\x7f\x7f\x7f':
                             self.merge_option += ['--language', '0:%s' % item['lang']]
                         self.audio_codec += item['codec_name'] + '.'
                     self.merge_option += ['"%s"' % item['filepath_merge']]
