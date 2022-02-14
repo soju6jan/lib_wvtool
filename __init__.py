@@ -26,4 +26,4 @@ except:
 from .manager import WVDecryptManager
 from .tool import WVTool
 from .downloader import WVDownloader
-from .m3u8 import Downloader_m3u8
+from .ffmpeg import Ffmpeg
